@@ -8,7 +8,9 @@ Connectdb()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
 app.use('/', require('./Routes/authRoutes'))
 
 app.listen(

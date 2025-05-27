@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const cors = require('cors')
 const {
   registerUser,
   loginUser,
@@ -13,12 +12,6 @@ const {
   updateUser,
 } = require('../Controller/adminController.js')
 
-router.use(
-  cors({
-
-    origin: 'http://localhost:5173',
-  })
-)
 
 router.post('/register', registerUser)
 router.post('/login', loginUser)
