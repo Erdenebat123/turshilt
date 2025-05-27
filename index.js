@@ -7,7 +7,7 @@ Connectdb()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.use('http://localhost:5173/', require('./Routes/authRoutes'))
+app.use('/', require('./Routes/authRoutes'))
 
 app.listen(
   process.env.PORT,
