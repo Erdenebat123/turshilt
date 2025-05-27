@@ -6,11 +6,13 @@ const Connectdb = require('./config/DB')
 const app = express()
 Connectdb()
 
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(cors({
-  origin: 'http://localhost:5173'
-}));
+
 app.use('/', require('./Routes/authRoutes'))
 
 app.listen(
