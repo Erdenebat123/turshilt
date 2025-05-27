@@ -1,6 +1,5 @@
 const User = require('../Model/user')
 
-
 //register
 const registerUser = async (req, res) => {
   try {
